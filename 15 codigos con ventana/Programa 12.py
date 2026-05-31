@@ -1,0 +1,18 @@
+from tkinter import *
+def dividir():
+    num1 = float(entrada1.get())
+    num2 = float(entrada2.get())
+    resultado = round(num1 / num2, 1)
+    texto_resultado.config(text="Resultado: " + str(resultado))
+ventana = Tk()
+ventana.title("Programa 12")
+Label(ventana, text="Dividendo").pack()
+entrada1 = Entry(ventana)
+entrada1.pack()
+Label(ventana, text="Divisor").pack()
+entrada2 = Entry(ventana)
+entrada2.pack()
+Button(ventana, text="Calcular", command=dividir).pack()
+texto_resultado = Label(ventana, text="")
+texto_resultado.pack()
+ventana.mainloop()
